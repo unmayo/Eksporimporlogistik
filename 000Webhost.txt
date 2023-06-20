@@ -1,0 +1,29 @@
+Hello do this if you want this to compactible to 000webhost
+
+1. in koneksi.php change the entire code to this:
+<?php
+$host = "localhost";
+$user = "id20933359_export";
+$pass = "PBL=semester3";
+$db = "id20933359_exportandimportdata";
+
+$koneksi = mysqli_connect($host, $user, $pass, $db);
+if (mysqli_connect_errno()) {
+    die("Failed to connect to MySQL: " . mysqli_connect_error());
+}
+?>
+
+2. Add id20933359_exportandimportdata.sql in the folder to you phpmyadmin
+
+3. lastly add this line in .htaccess
+php_flag output_buffering on
+please do not attempt to modify or remove this line `php_value display_errors 1`
+in the .htaccess file
+
+Comon error
+if there some error to connect the db and the web try to match the host name, password, username in koneksi.php
+the db info is provided by 000webhost
+
+if all done you are good to go
+please notify me if something when wrong
+-adib
